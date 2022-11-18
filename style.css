@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  font-family: "Sen", sans-serif;
+  width: 100%;
+  height: 60px;
+  background-color: navy;
+  color: deeppink;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  height: 100%;
+}
+
+.logo-container {
+  color: deeppink;
+  flex: 1;
+  align-items: center;
+}
+
+.logo.active {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.menu-container {
+  flex: 6;
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-list-item {
+  margin-right: 30px;
+}
+
+.menu-list-item.active {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-text-container {
+  margin: 0 20px;
+  color: deeppink;
+}
+
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: antiquewhite;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.toggle-icon {
+  color: goldenrod;
+  transition: 0.5s ease all;
+}
+
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: navy;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+
+.sidebar {
+  width: 60px;
+  height: 100%;
+  align-items: center;
+  background-color: navy;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.left-menu-icon {
+  font-size: 24;
+  color: deeppink;
+  margin-bottom: 50px;
+  transition: all 0.25s ease-in-out;
+}
+
+.left-menu-icon:hover {
+  transform: scale(1.8);
+  transition: all 0.25s ease-in-out;
+}
+
+.container {
+  background: rgb(16, 16, 158);
+  /* background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,19,121,1) 55%, rgba(0,212,255,1) 100%); */
+  min-height: calc(100vh - 50px);
+  color: white;
+}
+
+.content-container {
+  margin-left: 50px;
+}
+
+.featured-content {
+  height: 50vh;
+  padding: 50px;
+}
+
+.featured-title {
+  width: 200px;
+}
+
+.featured-desc {
+  width: 500px;
+  color: lightgray;
+  margin: 30 0px;
+}
+
+.featured-button {
+  background-color: deeppink;
+  color: navy;
+  padding: 15 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 14;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.featured-button:hover {
+  color: navy;
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.movie-list-container {
+  padding: 20px;
+}
+
+.movie-list-wrapper {
+  position: relative;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: all 1s ease-out;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  transform: translateX(0);
+  transition: all 1s ease-out;
+}
+
+.movie-list-item {
+  margin-right: 30px;
+  position: relative;
+}
+
+.movie-list-item-img {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+
+.movie-list-item-button {
+  font-weight: bold;
+  padding: 10px;
+  background-color: navy;
+  color: deeppink;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+  left: 50px;
+  opacity: 0;
+}
+
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: 1s all ease-in-out;
+}
+
+/* Actives */
+.arrow {
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  color: lightgray;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.container.active {
+  background-color: whitesmoke;
+}
+
+.movie-list-title.active {
+  color: black;
+}
+
+.navbar-container.active {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.profile-text-container.active {
+  color: black;
+}
+
+.sidebar.active {
+  background-color: whitesmoke;
+}
+
+.left-menu-icon.active {
+  color: black;
+}
+
+.toggle.active {
+  background-color: black;
+}
+
+.toggle-ball.active {
+  background-color: whitesmoke;
+  transform: translateX(-20px);
+}
+
+.movie-list-item-button.active {
+  font-weight: bold;
+  padding: 10px;
+  background-color: black;
+  color: deeppink;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+  left: 50px;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 940px) {
+  .menu-container {
+    display: none;
+  }
+}
